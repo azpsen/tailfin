@@ -146,7 +146,7 @@ $ npm run build && npm run start
 
 ## Configuration <a name="configuration"></a>
 
-The URL for the Tailfin API can be set with the environment variable `TAILFIN_API_URL`. It defaults to `http://localhost:8081`, which assumes the API runs on the same machine and uses the default port.
+The URL for connecting to the Tailfin API from the Web UI can be set with the environment variable `TAILFIN_API_URL`. It defaults to `http://localhost:8081`, which assumes the API runs on the same machine and uses the default port.
 
 ### Backend <a name="backend_configuration"></a>
 
