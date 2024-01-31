@@ -1,0 +1,36 @@
+version: '3'
+services:
+  web:
+    build: ./web
+    container_name: tailfin-web
+    ports:
+      - 3000:3000
+    depends_on:
+      - api
+  api:
+    build: ./api
+    container_name: tailfin-api
+    environment:
+      - TAILFIN_DB_URI=db
+      - TAILFIN_DB_PORT=27017
+      - TAILFIN_DB_NAME=${DB_NAME}
+      - TAILFIN_DB_USER=${MONGO_USERNAME}
+      - TAILFIN_DB_PWD=${MONGO_PASSWORD}
+      - JWT_SECRET_KEY="please-change-me"
+      - JWT_REFRESH_SECRET_KEY="change-me-i-beg-of-you"
+      - TAILFIN_ADMIN_USERNAME="admin"
+      - TAILFIN_ADMIN_PASSWORD="change-me-now"
+      - TAILFIN_PORT=8081
+    depends_on:
+      - db
+    ports:
+      - 8081:8081
+  db:
+    image: mongo
+    container_name: tailfin-db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_USERNAME}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_PASSWORD}
+      - MOGNO_INITDB_DATABASE=${DB_NAME}
+    ports:
+      - 27017:27017
