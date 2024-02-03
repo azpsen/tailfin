@@ -29,7 +29,6 @@
   - [Docker](#docker)
   - [From Source](#from_source)
 - [Configuration](#configuration)
-- [Usage](#usage)
 - [Roadmap](#roadmap)
 
 ## About <a name="about"></a>
@@ -40,11 +39,16 @@ I created this because I was disappointed with the options available for digital
 ForeFlight is likely most commonly used, but my proclivity towards self-hosting drove me to seek out another solution.
 Since I could not find any ready-made self-hosted logbooks, I decided to make my own.
 
+#### :warning: This project is still in active development and may be subject to breaking changes! :warning:
+That said, it is functional in its current state and I have been using it to log my flights, including 
+a recent trip from Minnesota to Alaska (shown in the screenshots above), which served as an extensive 
+test of its functionanlity.
+
 ## Getting Started <a name="getting_started"></a>
 
 ### Docker <a name="docker"></a>
 
-|:exclamation: Note :exclamation: |
+|:exclamation: Warning :exclamation: |
 |---------------------------------|
 | Docker builds are considered unstable at this point and cannot be guaranteed to work without customization. Proceed at your own risk |
 
